@@ -1,3 +1,4 @@
+alert("Bienvenido, te ayudaré a saber si te conviene pagar algo en cuotas o de contado teniendo en cuenta la inflacion!");
 let contado = parseFloat(prompt("Ingrese el precio de contado: "));
 let precioCuotas = parseFloat(prompt("Ingrese el precio total en cuotas: "));
 let cuotas = parseInt(prompt("ingrese la cantidad de cuotas a pagar: "));
@@ -10,10 +11,10 @@ let porcentaje = 0;
     while((contado < precioCuotas) && (contado != 0) && (precioCuotas != 0) && (cuotas != 0)){
         calcularPorcentaje();
         if(porcentaje < inflacion){
-            alert("Te conviene las cuotas mi rey");
+            alert("Te conviene las cuotas");
         }
         else{
-            alert("No te conviene mi rey");
+            alert("No te conviene las cuotas");
         } 
         break;
     }
