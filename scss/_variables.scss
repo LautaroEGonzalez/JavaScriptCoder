@@ -1,0 +1,19 @@
+$color-principal:#fceff5;
+$color-header:#fad7da;
+$color-boton:#d3a7ab;
+@mixin size($h,$w){
+    height: $h;
+    width: $w;
+}
+
+.padd{
+    padding: 20px;
+}
+
+.zoom {
+    transition: transform .2s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.1); 
+}

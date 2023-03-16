@@ -1,0 +1,85 @@
+@import "./fonts";
+@import "./partials/productos";
+@import "./partials/empleo";
+@import "./partials/pedidos";
+@import "./partials/nosotros";
+@import "./variables";
+
+* { 
+    margin: 0;
+    padding: 0;
+    header{
+        .navbar-brand {
+            img {
+            height: 12vh;
+            width: 30vw;
+            object-fit:contain;
+            }
+        }
+        .nav-item{
+            padding-right: 20px;
+            font-family: gatwick;
+            .nav-link{
+                border-bottom: 1px solid grey;
+            }
+        }
+    }
+    main{
+        .link{
+            text-decoration: none;
+        }
+        background-color: $color-principal;
+        .separador{
+            h3{
+                text-align: center;
+                padding: 15px;
+                border: 1px solid darkgrey;
+                background-color:$color-principal;
+            }
+        }
+        .carousel-item{
+            height: 84vh;
+            img{
+                height: 84vh;
+                object-fit: cover;
+                object-position: center; 
+            }
+        }
+        .contactos{
+            border-top: 1px solid $color-header;
+            .redes{
+                border-right: 1px solid $color-header;
+                img{
+                    padding: 20px;
+                    height: 125px;
+                    height: 125px;            
+                }
+                p{
+                    background-color: $color-header;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                }
+            }
+            .mapa{
+                iframe{
+                    padding-bottom: 10px;
+                }
+                p{
+                    background-color: $color-header;
+                    font-weight: bold;
+                    font-size: 1.2rem;  
+                }
+            }
+        }
+        .principal{
+            img{
+                width: 250px;
+                height: 250px; 
+                border-radius: 100%;
+            }
+        }
+    }
+    footer{
+        background-color: $color-header;
+    }
+}

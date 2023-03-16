@@ -1,23 +1,49 @@
-alert("Bienvenido, te ayudaré a saber si te conviene pagar algo en cuotas o de contado teniendo en cuenta la inflacion!");
-let contado = parseFloat(prompt("Ingrese el precio de contado: "));
-let precioCuotas = parseFloat(prompt("Ingrese el precio total en cuotas: "));
-let cuotas = parseInt(prompt("ingrese la cantidad de cuotas a pagar: "));
-let inflacion = 6;
-let porcentaje = 0;
-    function calcularPorcentaje(){
-        porcentaje = ((((precioCuotas/cuotas) - (contado/cuotas)) / contado) * 100);
-        console.log(porcentaje);
-    }
-    while((contado < precioCuotas) && (contado != 0) && (precioCuotas != 0) && (cuotas != 0)){
-        calcularPorcentaje();
-        if(porcentaje < inflacion){
-            alert("Te conviene las cuotas");
-        }
-        else{
-            alert("No te conviene las cuotas");
-        } 
-        break;
-    }
+ 
+const principal = document.getElementById("principal");
+const verCarrito = document.getElementById("verCarrito")
+const mainCarrito = document.getElementById("carrito")
+let carrito = [];
 
+productos.forEach((producto) => {
+  let contenido = document.createElement("div");
+  contenido.className= "card text-center";
+  contenido.innerHTML = `
+  
+  <img src="${producto.img}" class="card-img-top">
+  <h5 class="">${producto.nombre}</h5>
+  <p class="">${producto.precio}$</p>
+  
+  `;
+  principal.append(contenido);
+
+  let comprar = document.createElement("button");
+  comprar.className= "btn btn-primary";
+  comprar.innerText = "comprar";
+  contenido.append(comprar);
+
+  comprar.addEventListener("click", () => {
+    carrito.push({
+      id : producto.id,
+      img: producto.img,
+      nombre: producto.nombre,
+      precio: producto.precio,
+    });
+    console.log(carrito);
+  });
+});
+verCarrito.addEventListener("click", () => {
+  const header = document.createElement("div");
+  // header.className = (""); 
+  header.innerHTML =`
+    <h1> carrito </h1>
+`;
+mainCarrito.append(header);
+
+const button = document.createElement("h1");
+button.innerText("X");
+
+header.append(button);
+})
+console.log(mainCarrito)
 
 

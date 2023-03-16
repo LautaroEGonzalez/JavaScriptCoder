@@ -1,0 +1,17 @@
+@import "../variables";
+.nosotros{
+    .nosotros--texto{
+        font-size: 1rem;
+    }
+    img{
+        padding: 30px;
+        @include size(500px,500px);
+        border-radius: 100%;
+        border-color: 1px solid $color-header;
+    }
+}
+@media (max-width: 600px) {
+    .nosotros img{
+        @include size(250px,250px);
+    }
+} 

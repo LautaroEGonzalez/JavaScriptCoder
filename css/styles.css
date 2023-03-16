@@ -1,0 +1,149 @@
+@font-face {
+  font-family: gatwick;
+  src: url(../assets/Gatwick/Gatwick-Bold.otf); }
+
+.aver{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 15px;
+  border-radius: 5%;
+  border: 2px solid #fad7da; 
+  padding: 5px;
+  margin: 5px;
+}
+  
+  .card img {
+    height: 30vh;
+    width: 30vh;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 1px solid #fad7da; }
+  .card .card-title {
+    border-bottom: 1px solid grey; }
+
+@media (max-width: 1200px) {
+  .card img {
+    height: 20vh;
+    width: 20vh; } }
+
+.padd {
+  padding: 20px; }
+
+.zoom {
+  transition: transform .2s; }
+
+.zoom:hover {
+  transform: scale(1.1); }
+
+.postulate {
+  margin: 20px 20% 20px 20%;
+  border: 2px solid #fad7da;
+  border-radius: 2%;
+  padding: 10px; }
+  .postulate .btn {
+    background-color: #d3a7ab; }
+
+.padd {
+  padding: 20px; }
+
+.zoom {
+  transition: transform .2s; }
+
+.zoom:hover {
+  transform: scale(1.1); }
+
+.pedidos {
+  height: 100%;
+  border: 1px solid #d3a7ab; }
+  .pedidos .row {
+    border: 1px solid #d3a7ab; }
+  .pedidos .alt {
+    height: 50px; }
+
+.padd {
+  padding: 20px; }
+
+.zoom {
+  transition: transform .2s; }
+
+.zoom:hover {
+  transform: scale(1.1); }
+
+.nosotros .nosotros--texto {
+  font-size: 1rem; }
+
+.nosotros img {
+  padding: 30px;
+  height: 500px;
+  width: 500px;
+  border-radius: 100%;
+  border-color: 1px solid #fad7da; }
+
+@media (max-width: 600px) {
+  .nosotros img {
+    height: 250px;
+    width: 250px; } }
+
+.padd {
+  padding: 20px; }
+
+.zoom {
+  transition: transform .2s; }
+
+.zoom:hover {
+  transform: scale(1.1); }
+
+* {
+  margin: 0;
+  padding: 0; }
+  * header .navbar-brand img {
+    height: 12vh;
+    width: 30vw;
+    object-fit: contain; }
+  * header .nav-item {
+    padding-right: 20px;
+    font-family: gatwick; }
+    * header .nav-item .nav-link {
+      border-bottom: 1px solid grey; }
+  * main {
+    background-color: #fceff5; }
+    * main .link {
+      text-decoration: none; }
+    * main .separador h3 {
+      text-align: center;
+      padding: 15px;
+      border: 1px solid darkgrey;
+      background-color: #fceff5; }
+    * main .carousel-item {
+      height: 84vh; }
+      * main .carousel-item img {
+        height: 84vh;
+        object-fit: cover;
+        object-position: center; }
+    * main .contactos {
+      border-top: 1px solid #fad7da; }
+      * main .contactos .redes {
+        border-right: 1px solid #fad7da; }
+        * main .contactos .redes img {
+          padding: 20px;
+          height: 125px;
+          height: 125px; }
+        * main .contactos .redes p {
+          background-color: #fad7da;
+          font-weight: bold;
+          font-size: 1.2rem; }
+      * main .contactos .mapa iframe {
+        padding-bottom: 10px; }
+      * main .contactos .mapa p {
+        background-color: #fad7da;
+        font-weight: bold;
+        font-size: 1.2rem; }
+    * main .principal img {
+      width: 250px;
+      height: 250px;
+      border-radius: 100%; }
+  * footer {
+    background-color: #fad7da; }

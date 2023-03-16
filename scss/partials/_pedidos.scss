@@ -1,0 +1,12 @@
+@import "../variables";
+.pedidos{
+    height: 100%;
+    border:  1px solid $color-boton;
+    .row{
+        border: 1px solid $color-boton;
+    }
+    .alt{
+        height: 50px;
+    }
+}
+
