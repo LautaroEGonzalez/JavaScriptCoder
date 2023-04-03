@@ -3,8 +3,7 @@ const verCarrito = document.getElementById("verCarrito");
 const resetCarrito = document.getElementById("resetCarrito");
 const storageKey = "carrito";
 
-let carrito = JSON.parse(localStorage.getItem(storageKey)) || []; // Obtener el carrito del storage, si no existe crear un array vacío
-
+let carrito = JSON.parse(localStorage.getItem(storageKey)) || []; 
 productos.forEach((producto) => {
   let contenido = document.createElement("div");
   contenido.className = "card text-center";
@@ -81,7 +80,7 @@ verCarrito.addEventListener("click", () => {
         </tr>
       `;
     });
-      
+   
 
     productosEnCarrito += `
       <tr>
@@ -102,4 +101,13 @@ verCarrito.addEventListener("click", () => {
     showCloseButton:true,
     showConfirmButton: false,
   });
+const botonBorrar = document.querySelectorAll(`.btn-danger`);
+botonBorrar.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const idProducto = parseInt(boton.id.split("-")[1]);
+    carrito = carrito.filter((producto) => producto.id !== idProducto);
+    localStorage.setItem(storageKey, JSON.stringify(carrito));
+    boton.closest(".elemento-carrito").remove();
+  });
+});
 });
